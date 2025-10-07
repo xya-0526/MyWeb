@@ -79,3 +79,25 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* 你的导航栏高度 */
+}
+
+/* 兼容 iOS */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* 启用 momentum scrolling */
+}
+
+/* 每个区域顶部预留空间 */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* 导航栏用 sticky 增强兼容性 */
+#navbar {
+  position: sticky;
+  top: 0;
+}
