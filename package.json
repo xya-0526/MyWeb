@@ -8,10 +8,12 @@
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "preview": "vite preview",
     "prepare": "husky install",
-    "deploy": "gh-pages -d dist -f"
+    "deploy": "gh-pages -d dist -f",
+    "start":" vite --mode production"
+    
   },
   "dependencies": {
     "@kangc/v-md-editor": "^2.3.18",
