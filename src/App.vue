@@ -1,21 +1,6 @@
-<script setup lang="ts">
-import canvas from '@/utils/bg.js'
-import { onMounted } from 'vue'
-onMounted(() => {
-    canvas()
-})
-</script>
+<script setup lang="ts"></script>
 <template>
-    <div class="container">
-        <!-- <span class="bg"></span> -->
-        <canvas id="canvas"></canvas>
+    <div class="w-full absolute h-full bg-dark text-light font-inter overflow-x-hidden">
         <router-view></router-view>
     </div>
 </template>
-<style scoped>
-.container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-</style>

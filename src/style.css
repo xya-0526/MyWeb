@@ -1,29 +1,81 @@
-* {
-	margin: 0;
-	padding: 0;
+@import "tailwindcss";
+
+/* -------------------- 🎨 自定义主题变量 -------------------- */
+@theme {
+  --color-primary: oklch(65.3% 0.26 268);   /* 原 #6366F1  (indigo-500) */
+  --color-secondary: oklch(70.5% 0.23 163); /* 原 #10B981  (emerald-500) */
+  --color-dark: oklch(27.4% 0.04 260);      /* 原 #1E293B  (slate-800) */
+  --color-light: oklch(97.6% 0.01 240);     /* 原 #F8FAFC  (slate-50) */
+  --color-accent: oklch(79.1% 0.18 78);     /* 原 #F59E0B  (amber-500) */
+  --font-inter: 'Inter', sans-serif;
 }
 
-html,
-body {
-	font-size: 16px;
-	overflow: hidden;
-	background: black;
-	position: relative;
-}
+/* -------------------- 🧩 自定义工具类 -------------------- */
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
 
-.bg {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-accent)
+    );
+  }
+
+  .bg-blur {
+    backdrop-filter: blur(8px);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 10px 25px -5px rgba(99, 102, 241, 0.2),
+      0 8px 10px -6px rgba(99, 102, 241, 0.15);
+  }
+
+  .card-gradient {
+    background: linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.8),
+      rgba(15, 23, 42, 0.9)
+    );
+  }
+}
+*{
+	scroll-behavior: smooth;
+}
+html,body{
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	padding: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+}
+@media screen and (min-width: 790px) {
+  html,
+  body {
+    font-size: 1.1vw;
+  }
 }
 
-#canvas {
-	position: absolute;
-	display: block;
-	width: 100vw;
-	height: 100vh;
-	/* 	background: radial-gradient(#ffc38c, #ff9b40); */
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
+

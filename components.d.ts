@@ -8,18 +8,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AAvatar: typeof import('@arco-design/web-vue')['Avatar']
-    AList: typeof import('@arco-design/web-vue')['List']
-    AListItem: typeof import('@arco-design/web-vue')['ListItem']
-    AListItemMeta: typeof import('@arco-design/web-vue')['ListItemMeta']
-    ASpace: typeof import('@arco-design/web-vue')['Space']
-    ASpin: typeof import('@arco-design/web-vue')['Spin']
-    ASwitch: typeof import('@arco-design/web-vue')['Switch']
-    MyAvater: typeof import('./src/components/myAvater.vue')['default']
-    MyList: typeof import('./src/components/myList.vue')['default']
-    MyNev: typeof import('./src/components/myNev.vue')['default']
+    AButton: typeof import('@arco-design/web-vue')['Button']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    UserInof: typeof import('./src/components/userInof.vue')['default']
   }
 }
