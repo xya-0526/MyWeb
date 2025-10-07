@@ -17,3 +17,37 @@ export function formatCreateTime(obj: User) {
         }
     }
 }
+export const setupWechatSmoothScroll = () => {
+  // 判断是否微信浏览器
+  if (/MicroMessenger/i.test(navigator.userAgent)) {
+    console.log('检测到微信浏览器，启用JS平滑滚动修复')
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const targetId = this.getAttribute('href')
+        if (!targetId || targetId === '#') return
+
+        const targetElement = document.querySelector(targetId)
+        if (!targetElement) return
+
+        // 获取导航栏高度
+        const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0
+
+        // 计算目标位置（减去导航栏高度和额外间距）
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight -
+          20
+
+        // 平滑滚动
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      })
+    })
+  }
+}

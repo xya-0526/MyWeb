@@ -12,6 +12,7 @@ import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js'
 import '@kangc/v-md-editor/lib/theme/style/vuepress.css'
 // 引入代码高亮库 prismjs
 import Prism from 'prismjs'
+import { setupWechatSmoothScroll } from './utils/utils'
 // 注册主题（必须传入 Prism）
 VMdPreview.use(vuepressTheme, {
     Prism // 代码高亮
@@ -22,4 +23,5 @@ document.title = import.meta.env.VITE_APP_TITLE
 app.use(VMdPreview)
 app.use(router)
 app.use(pinia)
+setupWechatSmoothScroll()
 app.mount('#app')

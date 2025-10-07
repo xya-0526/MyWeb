@@ -53,7 +53,7 @@
                             </div>
 
                             <a
-                                :href="item.link" 
+                                :href="item.link"
                                 target="_blank"
                                 class="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium transition-colors"
                             >
