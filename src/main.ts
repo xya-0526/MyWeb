@@ -18,6 +18,7 @@ VMdPreview.use(vuepressTheme, {
 })
 const app = createApp(App)
 const pinia = createPinia()
+document.title = import.meta.env.VITE_APP_TITLE
 app.use(VMdPreview)
 app.use(router)
 app.use(pinia)
