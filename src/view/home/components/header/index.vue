@@ -60,22 +60,6 @@ const mobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value
 }
-
-const handleScroll = () => {
-    if (window.scrollY > 100) {
-        isScrolled.value = true
-    } else {
-        isScrolled.value = false
-    }
-}
-
-onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <style scoped>

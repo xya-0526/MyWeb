@@ -67,6 +67,7 @@ const formdata = ref({ text: '' })
 const psotDis = async () => {
     if (!formdata.value) return alert('留言不能为空')
     const res = await addDiscussion(formdata.value)
+    data.value.push(res.data)
     alert(res.message)
 }
 </script>
