@@ -45,7 +45,7 @@
                 <a href="#home" class="py-2 hover:text-primary transition-colors">首页</a>
                 <a href="#artical" class="py-2 hover:text-primary transition-colors">技术博文</a>
                 <a href="#production" class="py-2 hover:text-primary transition-colors">项目开发</a>
-                <a href="discussion" class="py-2 hover:text-primary transition-colors">留言</a>
+                <a href="#discussion" class="py-2 hover:text-primary transition-colors">留言</a>
             </div>
         </div>
     </header>
