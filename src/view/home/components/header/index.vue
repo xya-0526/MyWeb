@@ -9,7 +9,7 @@
                 <div
                     class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
                 ></div>
-                <span class="text-xl font-bold">MY<span class="text-primary">WEB_XYA</span></span>
+                <span class="text-xl font-bold">ISNOT<span class="text-primary">MOON</span></span>
             </a>
 
             <!-- 桌面导航 -->

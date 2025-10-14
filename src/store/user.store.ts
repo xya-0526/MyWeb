@@ -14,7 +14,8 @@ export const userstore = defineStore('userInof', () => {
         },
         articals: [],
         productions: [],
-        discussions: []
+        discussions: [],
+        email: ''
     })
     const GetuserInof = async () => {
         const data = await getuserInof()
